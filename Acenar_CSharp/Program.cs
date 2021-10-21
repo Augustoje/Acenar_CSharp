@@ -4,40 +4,55 @@ namespace ConsoleClassePessoa
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main(string[] aRGs)
         {
-            Pessoa pessoa = new Pessoa();
+            Pessoa pessoaV = new Pessoa();
 
-            Console.WriteLine("Digite o nome: ");
-            pessoa.nome = Console.ReadLine();
+            Console.Write("Digite o Nome: ");
+            pessoaV.Nome = Console.ReadLine();
 
-            Console.WriteLine("Digite sua idade: ");
-            pessoa.idade = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Idade: ");
+            pessoaV.Idade = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine("Digite seu RG: ");
-            pessoa.rg = Console.ReadLine();
+            Console.Write("Digite seu RG: ");
+            pessoaV.RG = Console.ReadLine();
 
-            Console.WriteLine("Digite seu CPF: ");
-            pessoa.cpf = Console.ReadLine();
+            Console.Write("Digite seu CPF: ");
+            pessoaV.CPF = Console.ReadLine();
 
-            Console.WriteLine("Nome: {0}", pessoa.nome);
-            Console.WriteLine("Idade: {0}", pessoa.idade);
-            Console.WriteLine("Rg: {0}", pessoa.rg);
-            Console.WriteLine("CPF: {0}", pessoa.cpf);
+            Console.WriteLine("Nome: {0}", pessoaV.Nome);
+            Console.WriteLine("Idade: {0}", pessoaV.Idade);
+            Console.WriteLine("RG: {0}", pessoaV.RG);
+            Console.WriteLine("CPF: {0}", pessoaV.CPF);
 
             Pessoa pessoaSimone = new Pessoa();
-            pessoaSimone.nome = "Simone Jesus";
-            pessoaSimone.idade = 35;
-            pessoaSimone.rg = "12.000.000-0";
-            pessoaSimone.cpf = "123.000.000-00";
 
-            Console.WriteLine("Nome: {0}", pessoaSimone.nome);
-            Console.WriteLine("Idade: {0}", pessoaSimone.idade);
-            Console.WriteLine("Nome: {0}", pessoaSimone.rg);
-            Console.WriteLine("Idade: {0}", pessoaSimone.idade);
+            pessoaSimone.Nome = "Simone";
+            pessoaSimone.Idade = 35;
+            pessoaSimone.RG = "12.000.000-0";
+            pessoaSimone.CPF = "123.000.000-00";
 
-            pessoa.Acenar(pessoaSimone);
-            pessoa.PerguntaIdade(pessoaSimone);
+            Console.WriteLine("Nome: {0}", pessoaSimone.Nome);
+            Console.WriteLine("Idade: {0}", pessoaSimone.Idade);
+            Console.WriteLine("RG: {0}", pessoaSimone.RG);
+            Console.WriteLine("CPF: {0}", pessoaSimone.CPF);
+
+            Pessoa pessoaAfonso = new Pessoa();
+
+            pessoaAfonso.Nome = "Afonso";
+            pessoaAfonso.Idade = 36;
+            pessoaAfonso.RG = "12.045.000-0";
+            pessoaAfonso.CPF = "123.000.789-00";
+
+            Console.WriteLine("Nome: {0}", pessoaAfonso.Nome);
+            Console.WriteLine("Idade: {0}", pessoaAfonso.Idade);
+            Console.WriteLine("RG: {0}", pessoaAfonso.RG);
+            Console.WriteLine("CPF: {0}", pessoaAfonso.CPF);
+
+
+            pessoaAfonso.Acenar(pessoaSimone);
+            pessoaSimone.PerguntaIdade(pessoaV, pessoaAfonso);
+            pessoaAfonso.ComoEsta(pessoaSimone, pessoaV);
 
 
 
