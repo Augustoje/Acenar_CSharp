@@ -22,7 +22,8 @@ namespace ConsoleClassePessoa
 
         public void PerguntaIdade(Pessoa pessoa1, Pessoa pessoa2)
         {
-            Console.WriteLine("{1} e {2}, quantos anos vocês tem?", this.Nome, pessoa1.Nome, pessoa2.Nome);
+            Console.WriteLine("{1} e {2}, quantos anos vocês tem?", 
+                this.Nome, pessoa1.Nome, pessoa2.Nome);
             pessoa1.RespostaIdade();
         }
 
@@ -33,7 +34,8 @@ namespace ConsoleClassePessoa
 
         public void ComoEsta(Pessoa pessoa1, Pessoa pessoa2)
         {
-            Console.WriteLine("{0}, sabe onde está o {2} e {1} ", this.Nome, pessoa1.Nome, pessoa2.Nome);
+            Console.WriteLine("{0}, sabe onde está o {2} e {1} ", 
+                this.Nome, pessoa1.Nome, pessoa2.Nome);
         }
     }
 }
